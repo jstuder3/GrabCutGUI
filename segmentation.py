@@ -10,7 +10,7 @@ from tkinter.colorchooser import askcolor
 from PIL import ImageTk, Image, ImageGrab
 
 
-img_number="769_2"
+img_number="770"
 downsampling_quotient = 8
 
 img = Image.open(f"data/images/{img_number}.JPG")
@@ -18,7 +18,7 @@ original_width, original_height = img.size
 img.close()
 
 canvas_width = 1500
-canvas_height = 1000
+canvas_height = int(round(canvas_width/1.5))
 
 
 class Paint(object):
@@ -31,7 +31,7 @@ class Paint(object):
         self.root.title('Paint')
         self.root.geometry('1920x1080')
         self.root.maxsize(1920,1080)
-        self.root.minsize(1200,800)
+        self.root.minsize(1650,1000)
 
         self.paint_tools = Frame(self.root,width=150,height=300,relief="ridge",borderwidth=2)
         self.paint_tools.place(x=0,y=0)
