@@ -47,37 +47,37 @@ class Paint(object):
 
         self.background = PhotoImage(file = f"data/images/{img_number}.png")
 
-        self.pen_logo = ImageTk.PhotoImage(Image.open('Pen_small.png'))
+        self.pen_logo = ImageTk.PhotoImage(Image.open('icons/Pen_small.png'))
         self.p = Label(self.paint_tools, text="Stift",borderwidth=0,font=('verdana',10,'bold'))
         self.p.place(x=5,y=10)
         self.pen_button = Button(self.paint_tools,padx=6,image=self.pen_logo,borderwidth=2,command=self.use_pen)
         self.pen_button.place(x=120,y=10)
 
-        self.foreground_logo = ImageTk.PhotoImage(Image.open('ffff00_small.png'))
+        self.foreground_logo = ImageTk.PhotoImage(Image.open('icons/ffff00_small.png'))
         self.foreground_label = Label(self.paint_tools,borderwidth=0,text='Vordergrund',font=('verdana',10,'bold'))
         self.foreground_label.place(x=5, y=40)
         self.foreground_button = Button(self.paint_tools,image = self.foreground_logo, borderwidth=2,command=self.set_foreground_colour) 
         self.foreground_button.place(x=120,y=40)
 
-        self.background_logo = ImageTk.PhotoImage(Image.open('ff00ff_small.png'))
+        self.background_logo = ImageTk.PhotoImage(Image.open('icons/ff00ff_small.png'))
         self.background_label = Label(self.paint_tools,borderwidth=0,text='Hintergrund',font=('verdana',10,'bold'))
         self.background_label.place(x=5, y=70)
         self.background_button = Button(self.paint_tools,image = self.background_logo, borderwidth=2,command=self.set_background_colour) 
         self.background_button.place(x=120, y=70)
 
-        self.cutout_logo = ImageTk.PhotoImage(Image.open('00ffff_small.png'))
+        self.cutout_logo = ImageTk.PhotoImage(Image.open('icons/00ffff_small.png'))
         self.cutout_label = Label(self.paint_tools,borderwidth=0,text='Cutout',font=('verdana',10,'bold'))
         self.cutout_label.place(x=5, y=100)
         self.cutout_button = Button(self.paint_tools,image = self.cutout_logo, borderwidth=2,command=self.set_cutout_colour) 
         self.cutout_button.place(x=120, y=100)
 
-        self.eraser_logo = ImageTk.PhotoImage(Image.open('Eraser_small.png'))
+        self.eraser_logo = ImageTk.PhotoImage(Image.open('icons/Eraser_small.png'))
         self.e = Label(self.paint_tools, text='Radierer',font=('verdana',10,'bold'))
         self.e.place(x=5,y=130)
         self.eraser_button = Button(self.paint_tools,image = self.eraser_logo,borderwidth=2,command=self.use_eraser)
         self.eraser_button.place(x=120,y=130)
 
-        self.scissors_logo = ImageTk.PhotoImage(Image.open('Scissors_small.png'))
+        self.scissors_logo = ImageTk.PhotoImage(Image.open('icons/Scissors_small.png'))
         self.scissors_label = Label(self.paint_tools, borderwidth = 0, text="Zuschneiden", font=("veranda", 10, "bold"))
         self.scissors_label.place(x=5, y=160)
         self.scissors_button = Button(self.paint_tools, image=self.scissors_logo, borderwidth = 2, command=self.compute_segmentation)
