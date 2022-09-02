@@ -7,5 +7,6 @@ Simple GUI to produce image cutouts based on the OpenCV implementation of GrabCu
     numpy 1.23.2
     scipy 1.9.1
     opencv-python 1.9.1
+    matplotlib 3.5.3
     tkinter
     Pillow 9.2
