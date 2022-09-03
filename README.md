@@ -1,5 +1,8 @@
 # GrabCutGUI
-Simple GUI to produce image cutouts based on the OpenCV implementation of GrabCut.
+Simple GUI to quickly and intuitively produce image cutouts based on the OpenCV implementation of GrabCut.
+
+![GrabCutGUI Demo 2](https://user-images.githubusercontent.com/87820315/188259901-bc3a17d7-7a3a-4a72-a04d-d8897ec1fe19.png)
+
 
 # Requirements (may work with other versions)
 
@@ -16,5 +19,11 @@ Simple GUI to produce image cutouts based on the OpenCV implementation of GrabCu
 Start the program using 
 
     python main.py
+    
+And then:
 
-Then select what should be part of the foreground, background, as well as a cutout of the image which should be put onto the final image regardless of the segmentation output.
+1. Load an image and set an output folder.
+2. Mark foreground, background and cutout with their respective colours.
+3. Press the scissors button.
+4. ???
+5. Profit.
