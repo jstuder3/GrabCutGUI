@@ -24,18 +24,18 @@ import utils.config as config
 config.img_name=""
 config.current_filename = ""
 config.input_path = ""
-config.output_path = ""
+config.output_path = "."
 
-config.DEFAULT_QUALITY = 8
+#config.DEFAULT_QUALITY = 8
 config.downsampling_quotient = config.DEFAULT_QUALITY
 
 config.original_width = 0
 config.original_height = 0
 
-config.canvas_width = 1500
+config.canvas_width = config.DEFAULT_CANVAS_WIDTH
 config.canvas_height = int(round(config.canvas_width/1.5))
 
-config.DEFAULT_PEN_SIZE = 70
+#config.DEFAULT_PEN_SIZE = 70
 
 if __name__ == '__main__':
     PaintGUI()

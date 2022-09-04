@@ -8,5 +8,6 @@ original_height = None
 canvas_width = None
 canvas_height = None
 
-DEFAULT_QUALITY = None
-DEFAULT_PEN_SIZE = None
+DEFAULT_CANVAS_WIDTH = 1500
+DEFAULT_QUALITY = 8
+DEFAULT_PEN_SIZE = 70

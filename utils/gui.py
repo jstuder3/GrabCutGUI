@@ -21,40 +21,40 @@ class PaintGUI(object):
         self.root.maxsize(2560,1660)
         self.root.minsize(1650,1000)
 
-        self.paint_tools = Frame(self.root,width=150,height=600,relief="ridge",borderwidth=2)
+        self.paint_tools = Frame(self.root,width=151,height=600,relief="ridge",borderwidth=2)
         self.paint_tools.place(x=0,y=0)
 
-        button_y_foundation = 120
+        button_y_foundation = 130
         button_counter = 0
         button_y_offset = 30
 
         #self.background = ImageTk.PhotoImage(Image.open(input_path))
 
-        self.input_select_button_logo = None
+        self.input_select_button_logo = ImageTk.PhotoImage(Image.open('icons/Folder_small.png'))
         self.input_select_label = Label(self.paint_tools, text="Dateiauswahl",borderwidth=0,font=('verdana',10,'bold'))
         self.input_select_label.place(x=5,y=10)
         self.input_select_button = Button(self.paint_tools,padx=6,image=self.input_select_button_logo,borderwidth=2,command=self.input_file_selection)
-        self.input_select_button.place(x=120,y=10)
+        self.input_select_button.place(x=120,y=5)
 
         self.input_select_name = Text(self.paint_tools, height = 1, width = 16, font=('verdana',10)) #Text(self.paint_tools, padx=6, text="Keine Datei gewählt..." borderwidth=0, font=('verdana',10,'bold'))
         self.input_select_name.place(x=5, y=40)
         self.input_select_name.insert(END, "Keine Datei...")
 
-        self.output_select_button_logo = None
+        self.output_select_button_logo = ImageTk.PhotoImage(Image.open('icons/Folder_small.png'))
         self.output_select_label = Label(self.paint_tools, text="Ausgabeordner",borderwidth=0,font=('verdana',10,'bold'))
-        self.output_select_label.place(x=5,y=60)
+        self.output_select_label.place(x=5,y=70)
         self.output_select_button = Button(self.paint_tools,padx=6,image=self.input_select_button_logo,borderwidth=2,command=self.output_folder_selection)
-        self.output_select_button.place(x=120,y=60)
+        self.output_select_button.place(x=120,y=65)
 
         self.output_folder_name = Text(self.paint_tools, height = 1, width = 16, font=('verdana',10)) #Text(self.paint_tools, padx=6, text="Keine Datei gewählt..." borderwidth=0, font=('verdana',10,'bold'))
-        self.output_folder_name.place(x=5, y=90)
+        self.output_folder_name.place(x=5, y=100)
         self.output_folder_name.insert(END, "Kein Ordner...")
 
         self.pen_logo = ImageTk.PhotoImage(Image.open('icons/Pen_small.png'))
         self.p = Label(self.paint_tools, text="Stift",borderwidth=0,font=('verdana',10,'bold'))
         self.p.place(x=5,y=button_y_foundation)
         self.pen_button = Button(self.paint_tools,padx=6,image=self.pen_logo,borderwidth=2,command=self.use_pen)
-        self.pen_button.place(x=120,y=button_y_foundation)
+        self.pen_button.place(x=120,y=button_y_foundation - 5)
 
         button_counter+=1
 
@@ -62,7 +62,7 @@ class PaintGUI(object):
         self.foreground_label = Label(self.paint_tools,borderwidth=0,text='Vordergrund',font=('verdana',10,'bold'))
         self.foreground_label.place(x=5, y=button_y_foundation + button_counter * button_y_offset)
         self.foreground_button = Button(self.paint_tools,image = self.foreground_logo, borderwidth=2,command=self.set_foreground_colour) 
-        self.foreground_button.place(x=120,y=button_y_foundation + button_counter * button_y_offset)
+        self.foreground_button.place(x=120,y=button_y_foundation + button_counter * button_y_offset - 5)
 
         button_counter+=1
 
@@ -70,7 +70,7 @@ class PaintGUI(object):
         self.background_label = Label(self.paint_tools,borderwidth=0,text='Hintergrund',font=('verdana',10,'bold'))
         self.background_label.place(x=5, y=button_y_foundation + button_counter * button_y_offset)
         self.background_button = Button(self.paint_tools,image = self.background_logo, borderwidth=2,command=self.set_background_colour) 
-        self.background_button.place(x=120, y=button_y_foundation + button_counter * button_y_offset)
+        self.background_button.place(x=120, y=button_y_foundation + button_counter * button_y_offset -5)
 
         button_counter+=1
 
@@ -78,7 +78,7 @@ class PaintGUI(object):
         self.cutout_label = Label(self.paint_tools,borderwidth=0,text='Cutout',font=('verdana',10,'bold'))
         self.cutout_label.place(x=5, y=button_y_foundation + button_counter * button_y_offset)
         self.cutout_button = Button(self.paint_tools,image = self.cutout_logo, borderwidth=2,command=self.set_cutout_colour) 
-        self.cutout_button.place(x=120, y=button_y_foundation + button_counter * button_y_offset)
+        self.cutout_button.place(x=120, y=button_y_foundation + button_counter * button_y_offset - 5)
 
         button_counter+=1
 
@@ -86,15 +86,15 @@ class PaintGUI(object):
         self.e = Label(self.paint_tools, text='Radierer',font=('verdana',10,'bold'))
         self.e.place(x=5,y=button_y_foundation + button_counter * button_y_offset)
         self.eraser_button = Button(self.paint_tools,image = self.eraser_logo,borderwidth=2,command=self.use_eraser)
-        self.eraser_button.place(x=120,y=button_y_foundation + button_counter * button_y_offset)
+        self.eraser_button.place(x=120,y=button_y_foundation + button_counter * button_y_offset - 5)
 
         button_counter+=1
 
         self.scissors_logo = ImageTk.PhotoImage(Image.open('icons/Scissors_small.png'))
-        self.scissors_label = Label(self.paint_tools, borderwidth = 0, text="Zuschneiden", font=("veranda", 10, "bold"))
+        self.scissors_label = Label(self.paint_tools, borderwidth = 0, text="Zuschneiden", font=('verdana',10,'bold'))
         self.scissors_label.place(x=5, y=button_y_foundation + button_counter * button_y_offset)
         self.scissors_button = Button(self.paint_tools, image=self.scissors_logo, borderwidth = 2, command=self.compute_segmentation)
-        self.scissors_button.place(x=120, y=button_y_foundation + button_counter * button_y_offset)
+        self.scissors_button.place(x=120, y=button_y_foundation + button_counter * button_y_offset - 5)
 
         button_counter+=1
 
@@ -226,6 +226,11 @@ class PaintGUI(object):
 
     def compute_segmentation(self):
 
+        if config.current_filename == "":
+            print("Please select an input image first")
+            return
+        print("Generating segmentation...")
+
         #set quality based on slider
         config.downsampling_quotient = self.quality_slider.get()
 
@@ -239,6 +244,8 @@ class PaintGUI(object):
         overlay_cutout_onto_image()
         
         cleanup()
+
+        print("Done!")
 
     def produce_and_save_mask(self):
         widget = self.c

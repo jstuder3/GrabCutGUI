@@ -86,12 +86,16 @@ def overlay_cutout_onto_image():
 
     row_matches, col_matches = np.where(cutout_mask==1)
 
-    topmost_index = np.min(row_matches)
-    bottommost_index = np.max(row_matches)
-    leftmost_index = np.min(col_matches)
-    rightmost_index = np.max(col_matches)
+    try: #prevent error when no cutout region is selected
+        topmost_index = np.min(row_matches)
+        bottommost_index = np.max(row_matches)
+        leftmost_index = np.min(col_matches)
+        rightmost_index = np.max(col_matches)
 
-    segmented_img[topmost_index:bottommost_index, leftmost_index:rightmost_index] = original_img[topmost_index:bottommost_index, leftmost_index:rightmost_index]
+        segmented_img[topmost_index:bottommost_index, leftmost_index:rightmost_index] = original_img[topmost_index:bottommost_index, leftmost_index:rightmost_index]
+
+    except:
+        print("No cutout region marked. Proceeding...")
 
     segmented_img = Image.fromarray(segmented_img)
     segmented_img.save(f"{config.output_path}/{config.current_filename}")
