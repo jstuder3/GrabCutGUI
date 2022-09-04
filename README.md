@@ -29,3 +29,6 @@ And then:
 5. Profit.
 
 Note that there can be only one cutout, as the outer bounds of all pixels marked with the cutout colour serve as the dimensions of a bounding box.
+
+# Settings
+The quality slider determines how smoothly the edges of the objects will be matched. Since GrabCut is too slow to reasonably work with high-res images, the image gets downsampled during processing and the resulting mask gets upsampled later to produce the final full-res segmentation. "1" means full resolution, "4" means 1/4 resolution, etc. As a referenece, for ~20 MP images I would recommend using a value of 8. I wouldn't go below 4 since processing time starts to get out of hand at that point.
