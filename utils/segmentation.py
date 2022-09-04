@@ -11,7 +11,7 @@ from tkinter import *
 from tkinter.colorchooser import askcolor
 from PIL import ImageTk, Image, ImageGrab
 
-import config
+import utils.config as config
 
 #produce downsampled image for faster computation
 def resize_image(input_path, current_filename, quotient=4):

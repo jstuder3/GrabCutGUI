@@ -9,9 +9,16 @@ from tkinter import *
 from tkinter.colorchooser import askcolor
 from PIL import ImageTk, Image, ImageGrab
 
-#import other files
-from gui import PaintGUI
-import config
+
+import sys
+import os
+
+file_dir = os.path.dirname(__file__)
+sys.path.append(file_dir)
+
+#import other modules
+from utils.gui import PaintGUI
+import utils.config as config
 
 #startup parameters
 config.img_name=""

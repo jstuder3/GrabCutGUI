@@ -9,8 +9,8 @@ from tkinter import *
 from tkinter.colorchooser import askcolor
 from PIL import ImageTk, Image, ImageGrab
 
-from segmentation import resize_image, segment_image, overlay_cutout_onto_image, cleanup
-import config
+from utils.segmentation import resize_image, segment_image, overlay_cutout_onto_image, cleanup
+import utils.config as config
 
 class PaintGUI(object):
 
