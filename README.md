@@ -1,7 +1,7 @@
 # GrabCutGUI
 Simple GUI to quickly and intuitively produce image cutouts based on the OpenCV implementation of GrabCut. Simply mark parts of the image that should be foreground / background and let GrabCut work its magic.
 
-![GrabCutGUI Demo 2](https://user-images.githubusercontent.com/87820315/188259901-bc3a17d7-7a3a-4a72-a04d-d8897ec1fe19.png)
+![GrabCutGUI Demo 2-min-min](https://user-images.githubusercontent.com/87820315/188329261-1fa772c8-93da-488d-96f4-0f2efbdfb2f5.jpeg)
 
 
 # Requirements (may work with other versions)
