@@ -127,9 +127,14 @@ class PaintGUI(object):
         self.root.bind("4", lambda event:self.use_eraser())
         #self.root.bind("6", lambda event:self.compute_segmentation())
         self.root.bind("<Return>", lambda event:self.compute_segmentation())
+        self.root.bind("<MouseWheel>", self._on_mousewheel)
 
         self.setup()
         self.root.mainloop()
+
+    def _on_mousewheel(self, event):
+        curr = self.choose_size_button.get()
+        self.choose_size_button.set(curr + int(event.delta / 10))
 
     def set_foreground_colour(self):
         self.activate_button(self.pen_button)
