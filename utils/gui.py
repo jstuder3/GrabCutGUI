@@ -134,7 +134,7 @@ class PaintGUI(object):
 
     def _on_mousewheel(self, event):
         curr = self.choose_size_button.get()
-        self.choose_size_button.set(curr + int(event.delta / 10))
+        self.choose_size_button.set(curr + int(event.delta / 15))
 
     def set_foreground_colour(self):
         self.activate_button(self.pen_button)
