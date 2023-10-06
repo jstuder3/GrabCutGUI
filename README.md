@@ -12,7 +12,7 @@ Simple GUI to quickly and intuitively produce image cutouts based on the OpenCV 
     opencv-python 1.9.1
     matplotlib 3.5.3
     tkinter
-    Pillow 9.2
+    Pillow
 
 # Usage
 
